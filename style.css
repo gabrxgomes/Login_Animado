@@ -4,6 +4,7 @@ body {
      font-family: 'Josegin Sans', sans-serif;
 }
 
+
 /* MEDIDAS !!!! 100vw ----> 1000px
 
    MEDIDAS !!!! 1vh ------> 10px */
@@ -11,7 +12,7 @@ body {
 .main-login{
     width: 100vw;
     height: 100vh;
-    background-color: #130b18;
+    background-color: #1e1326;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +28,7 @@ body {
 }
 
 .left-login > h1 {
+    
     font-size: 2.5vw;
     color: #ff77b7;
     /*PASSANDO ATRIBUTOS ALEM DA FORMATAÇÃO NO ESPAÇO DO DISPLAY X E Y E TALS*/
@@ -34,6 +36,7 @@ body {
 
 .left-login-image{
     width: 35vw;
+    
 }
 
 .right-login{ /*REFERENTE A BORDA QUE VAI EM VOLTA DOS INPUTS DO LOGIN*/
@@ -49,8 +52,8 @@ body {
 }
 
 .card-login{ /*REFERENTE A BORDA QUE VAI EM VOLTA DOS INPUTS DO LOGIN*/
-    width: 40%;
-    height:40%;
+    width: 60%; /*MODIFICA AS DIMENSÕES DO CIRCULO*/
+    height:60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,9 +68,11 @@ body {
     color: #ff77b7;
     font-weight: 800;
     margin: 0;
+    font-family:sans-serif;
 }   
 
 .textfield{
+    font-family: 'Josegin Sans', sans-serif;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -83,8 +88,9 @@ body {
     padding: 15px;
     background: #584a7a;
     color: #f0f0f0;
-
+    
     font-size: 12pt;
+    /*MUDA AS CARACTERISTICAS DO TEXTO DENTRO DOS CAMPOS DE LOGIN*/
 
     box-shadow: 0px 10px 40px #b4073b56;
     outline: none;
@@ -92,12 +98,16 @@ body {
 }
 
 .textfield > label {
+    
     color: #ff77b7;
     margin-bottom: 10px;
+    
 }
 
 .textfield > input::placeholder{
    color: #881188; 
+   font-family: 'Josegin Sans', sans-serif;
+   
 }
 
 .btn-login{
@@ -114,4 +124,88 @@ body {
     background: #ff77b7;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #ff77b7;
-}   
+} 
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+        
+    }
+
+    .left-login > h1{
+        display: none;
+        width: 50%;
+        height: 50%;
+    }
+
+    .left-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .left-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .card-login{
+        width: 75%; /*MODIFICA AS DIMENSÕES DO CIRCULO*/
+        height:75%;   
+
+    }
+
+    .left-login-image{
+        width: 35vw;
+        margin-bottom: 15%; 
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .main-login{
+        flex-direction: column;
+        
+    }
+
+    .left-login > h1{
+        display: none;
+        width: 50%;
+        height: 50%;
+    }
+
+    .left-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .left-login{
+        width: 80%;
+        height: auto;
+    }
+
+    .card-login{
+        width: 75%; /*MODIFICA AS DIMENSÕES DO CIRCULO*/
+        height:75%;   
+
+    }
+
+    .left-login-image{
+        width: 30vw;
+        margin-bottom: 10px; 
+    }
+}
